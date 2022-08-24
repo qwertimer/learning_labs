@@ -1,0 +1,38 @@
+{# templates/results.html #}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<title>{{ title  }}</title>
+
+</head>
+
+
+<body>
+
+<h1>{{ test_name  }} {{ title  }}</h1>
+
+<ul>
+
+{% for student in students %}
+
+<li>
+
+{% if student.score > 80 %}🙂{% else %}🙁{% endif %}
+
+<em>{{ student.name  }}:</em> {{ student.score  }}/{{ max_score  }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</body>
+
+</html>

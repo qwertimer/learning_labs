@@ -1,0 +1,8 @@
+
+Hello Tom!
+
+ I'm happy to inform you that you did very well on today's Python Challenge.
+ You reached 80 out of 100 points.
+
+ See you tomorrow!
+ Anke
