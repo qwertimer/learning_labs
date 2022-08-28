@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# This script feeds in the word with $1 and converts each letter matched in the pattern match with _ to reflect the score this is then counted with the ${#str} block which is a parameter expansion of the string, counting the items in the string.
+
+set -eu
+
+main() {
+ local -l str="$1"
+ str=${str//[^[:alpha:]]}
+ str=${str//[aeioulnrst]/_}  # 1
+ str=${str//[dg]/__}         # 2
+ str=${str//[bcmp]/___}      # 3
+ str=${str//[fhvwy]/____}    # 4
+ str=${str//[k]/_____}       # 5
+ str=${str//[jx]/________}   # 8
+ str=${str//[qz]/__________} # 10
+ echo $str
+ echo ${#str}
+}
+
+main "$@"
