@@ -14,4 +14,5 @@
   and run `go test`
 * We can then run autotesting with entr
   `` entr bash -c "clear; go run ." < <(find .)``
+  * Check out more from the 
 
